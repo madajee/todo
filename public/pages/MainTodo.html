@@ -1,0 +1,29 @@
+Main Todo List
+<div ng-controller="mainController">
+    <form name="form1">
+        <p>Enter Username:<input name="username" type="text" ng-model="username"  ng-minlength='4' required/>
+        <span ng-show="form1.username.$error.minlength">Username has to be atleast 4 chars</span></p>
+        <div ng-messages="form1.username.$error">
+            <div ng-message="required" ng-style={color:'purple'}> get todos for test user. type your username to get and add your todos</div>
+        </div>
+        <div ng-model="todos"> 
+            <!--<a href="#" class="btn btn-default" ng-click="getTodo()">Get Todo</a>-->
+            <button class="btn btn-default" ng-click="getTodo()">Get Todo</button>
+            <h3>Todos</h3>
+            <ul>
+                <li ng-repeat="todo in todos">
+                    <a ng-href="#/edittodo/{{todo._id}}" >{{ todo.username }}</a>  {{ "&nbsp;&nbsp;&nbsp;&nbsp;" + todo.todo }}
+                </li>
+            </ul>
+        </div>
+    </form>
+    <form name="form2">
+        <p>Add Todo: <input name="newTodo" type="text" ng-model="newTodo" ng-minlength='5'/>
+         <span ng-show="form2.newTodo.$error.minlength">Todo has to be atleast 5 chars</span></p>
+        <div ng-model="addedTodo"> 
+            <button class="btn btn-default" ng-click="addTodo()">Add Todo</button>
+            </br>
+        </div>
+        {{ addedTodo }}
+    </form>
+</div>

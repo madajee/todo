@@ -1,0 +1,11 @@
+Edit Todo </br>
+
+Username: {{ username }}
+<form name="form1">
+	<label>Todo: </label>
+	<div > 
+		<input name="todoText" type="text" ng-model="todotext"/>
+    	<button class="btn btn-default" ng-click="updateTodo()">Update Todo</button>
+    </div>
+    {{ updateTodoMsg }}
+</form>
