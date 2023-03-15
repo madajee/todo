@@ -16,11 +16,11 @@ Once docker is setup on your machine, you may clone this repository
 to your local directory. You may do that by typing the following command
 in your terminal:
 
-`git clone https://github.com/madajee/todo.git
+`git clone https://github.com/madajee/todo.git`
 
-You can then navigate to the SexEst directory:
+You can then navigate to the todo directory:
 
-cd todo`
+cd todo
 
 Once the repository is cloned and you have naviagated inside the todo directory, 
 you can build the Docker image by running the command:
