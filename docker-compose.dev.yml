@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+ todo:
+  build:
+   context: .
+  ports:
+   - 3000:3000
+  environment:
+   - SERVER_PORT=3000
+   - DATABASE_URL_PAAS=mongodb://mongo:27017/todo
+  volumes:
+   - ./:/app
+   - /app/node_modules
+
+ mongo:
+  image: mongo:4.2.8
+  ports:
+   - 27017:27017
+  volumes:
+   - mongodb:/data/db
+   - mongodb_config:/data/configdb
+volumes:
+ mongodb:
+ mongodb_config:
