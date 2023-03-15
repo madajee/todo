@@ -25,7 +25,7 @@ cd todo
 Once the repository is cloned and you have naviagated inside the todo directory, 
 you can build the Docker image by running the command:
 
-docker build -f Dockerfile -t todo:latest .
+`docker build -f Dockerfile -t todo:latest .`
 
 # Running the docker image as a container locally
 
